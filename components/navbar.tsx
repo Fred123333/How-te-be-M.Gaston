@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { Menu, X } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { MoulinDeFranceLogo } from './logo'
+import Image from 'next/image'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -38,10 +38,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-3 md:py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <MoulinDeFranceLogo className="w-8 h-8 md:w-10 md:h-10" />
-          <div className="hidden sm:block text-xl md:text-2xl font-serif font-bold text-primary whitespace-nowrap">
-            
-          </div>
+          <Image src="/logo.jpg" alt="Moulin de France" width={70} height={70} className="rounded-full border-2 border-primary" />
         </Link>
 
         {/* Desktop Navigation */}
